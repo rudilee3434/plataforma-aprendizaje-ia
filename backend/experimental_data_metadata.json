@@ -1,0 +1,10 @@
+{
+  "study_title": "Adaptive Learning Platform Effectiveness Study",
+  "methodology": "Randomized Controlled Trial",
+  "duration_weeks": 2,
+  "primary_outcome": "Mathematical performance improvement",
+  "secondary_outcomes": "Response time, engagement, learning progression",
+  "statistical_tests": "Independent t-test, Mann-Whitney U, ANOVA",
+  "software_used": "Python, scikit-learn, scipy, pandas",
+  "ethics_approval": "Pending - Educational Research Ethics Committee"
+}

@@ -1,0 +1,84 @@
+{
+  "experiment_summary": {
+    "title": "Efectividad del Sistema de Aprendizaje Adaptativo",
+    "hypothesis": "Los estudiantes que usan la plataforma adaptativa mejoran su rendimiento en matemáticas más rápido que los que usan métodos tradicionales",
+    "sample_size": {
+      "adaptive": 50,
+      "traditional": 50,
+      "total": 100
+    },
+    "study_duration": "2 semanas",
+    "date_generated": "2025-09-22T13:33:45.998191"
+  },
+  "statistical_analysis": {
+    "t_test": {
+      "statistic": 4.095887402809875,
+      "p_value": 8.662322561368255e-05,
+      "significant": true,
+      "effect_size": 0.8191774805619748,
+      "interpretation": "El grupo adaptativo tiene un rendimiento mayor de manera altamente significativo (p=0.0001)"
+    },
+    "mann_whitney": {
+      "statistic": 1745.0,
+      "p_value": 0.0003257702558663572,
+      "significant": true,
+      "interpretation": "Diferencia significativa detectada (p=0.0003). El grupo adaptativo supera al tradicional."
+    },
+    "anova_learning_style": {
+      "f_statistic": 0.4062504228318852,
+      "p_value": 0.6684598809700099,
+      "significant": false
+    },
+    "descriptive_stats": {
+      "adaptive": {
+        "mean": 0.7455771005031159,
+        "std": 0.15178576896007245,
+        "median": 0.7135891725801322,
+        "n": 50
+      },
+      "traditional": {
+        "mean": 0.6198682062201506,
+        "std": 0.15511113280915423,
+        "median": 0.6266429562621574,
+        "n": 50
+      }
+    },
+    "confidence_intervals": {
+      "adaptive": {
+        "lower": 0.7024400623123321,
+        "upper": 0.7887141386938996,
+        "mean": 0.7455771005031159
+      },
+      "traditional": {
+        "lower": 0.5757861100813202,
+        "upper": 0.663950302358981,
+        "mean": 0.6198682062201506
+      }
+    }
+  },
+  "learning_progression": {
+    "adaptive_learning_rate": 0.0414981874310197,
+    "traditional_learning_rate": 0.028887928562173783,
+    "improvement_difference": 0.012610258868845915
+  },
+  "conclusions": [
+    "✅ HIPÓTESIS CONFIRMADA: Existe una diferencia estadísticamente significativa (p=0.0001) entre los grupos, con un tamaño de efecto grande (d=0.819).",
+    "📈 PROGRESIÓN: El grupo adaptativo muestra una tasa de mejora 0.013 puntos mayor por día.",
+    "📊 RENDIMIENTO: El grupo adaptativo logró un 20.3% mejor rendimiento promedio (0.746 vs 0.620)."
+  ],
+  "recommendations": [
+    "🚀 Implementar el sistema adaptativo como metodología principal",
+    "📚 Capacitar a docentes en el uso de tecnologías adaptativas",
+    "📈 Expandir el estudio a más materias y niveles educativos",
+    "🔬 Realizar seguimiento longitudinal para evaluar efectos a largo plazo",
+    "💡 Implementar sistema de feedback continuo para estudiantes",
+    "👥 Crear grupos de control adicionales con diferentes metodologías",
+    "📱 Desarrollar versión móvil para mayor accesibilidad",
+    "🤖 Incorporar técnicas más avanzadas de machine learning"
+  ],
+  "exported_files": {
+    "data_file": "experiment_data.csv",
+    "metadata_file": "experiment_data_metadata.json",
+    "records_exported": 100
+  }
+}

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adaptive-learning-platform"
+version = "1.0.0"
+description = "Plataforma de Aprendizaje Personalizado con Inteligencia Artificial"
+authors = [{name = "Dino", email = "tu.email@ejemplo.com"}]
+requires-python = ">=3.8"
+
+dependencies = [
+    "Flask==2.3.3",
+    "Flask-SQLAlchemy==3.0.5",
+    "Flask-CORS==4.0.0",
+    "numpy>=2.0.0",
+    "pandas>=2.0.3",
+    "scikit-learn>=1.5.0",
+    "scipy>=1.14.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["backend"]
