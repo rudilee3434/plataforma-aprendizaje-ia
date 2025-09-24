@@ -1,7 +1,11 @@
-from flask import Flask, jsonify, request
+# backend/backend_adaptive_system.py
+
+from flask import Flask, jsonify, request, send_from_directory
+import os
 from experiment_analysis import run_complete_experiment_analysis, convert_numpy_types
 
-app = Flask(__name__)
+# Inicializamos Flask, indicando la carpeta del frontend
+app = Flask(__name__, static_folder="../frontend", static_url_path="")
 
 # Banco de preguntas por grado y dificultad
 banco = {
@@ -22,12 +26,19 @@ banco = {
     }
 }
 
+# Servir la página principal (frontend)
+@app.route("/")
+def serve_index():
+    return send_from_directory("../frontend", "index.html")
+
+# Endpoint para ejecutar análisis
 @app.route("/api/run-analysis", methods=["GET"])
 def run_analysis():
     report = run_complete_experiment_analysis()
     report_clean = convert_numpy_types(report)
     return jsonify(report_clean)
 
+# Endpoint para obtener preguntas adaptativas
 @app.route("/api/get-question", methods=["GET"])
 def get_question():
     grado = request.args.get("grado", "1")
@@ -55,5 +66,7 @@ def get_question():
         "pregunta": pregunta
     })
 
+# Ejecutar Flask
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Railway asigna el puerto
+    app.run(host="0.0.0.0", port=port)
